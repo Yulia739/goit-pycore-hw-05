@@ -1,9 +1,9 @@
 def caching_fibonacci():
-    # Initializes the cache and returns the internal function fibonacci
+    '''Initializes the cache and returns the internal function fibonacci'''
     cache = {}
 
     def fibonacci(n):
-        # Calculates the Fibonacci number using the cache.
+        '''Calculates the Fibonacci number using the cache.'''
         if n <= 0:
             return 0
         if n == 1:
