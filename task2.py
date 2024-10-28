@@ -3,11 +3,13 @@ from typing import Generator, Callable
 
 
 def generator_numbers(text: str) -> Generator[float, None, None]:
+    """Searches for numbers in a string."""
     for match in re.finditer(r"\b\d+(\.\d+)?\b", text):
         yield float(match.group())
 
 
 def sum_profit(text: str, func: Callable[[str], Generator[float, None, None]]) -> float:
+    """Calculates the sum."""
     return sum(func(text))
 
 
